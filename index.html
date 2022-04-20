@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Making presentation slides in R</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Making presentation slides in R">
+  <meta name="author" content="Dr Axel Barlow">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/zenburn.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/custom.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+    
+  <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='300px' src="assets/img/A1_FullColour.svg">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  
+  <aside class="gdbar">
+    <img src="assets/img/LA_Full_colour_reversed.svg">
+  </aside>
+  
+  <hgroup class="auto-fadein">
+    <h1>Making presentation slides in R</h1>
+    <h2>Coffee &amp; R</h2>
+    <p>Dr Axel Barlow<br/>email: a.barlow@bangor.ac.uk</p>
+  </hgroup>
+  
+    <a href="https://github.com/draxelbarlow/Ax_slidify_eg_bangor/zipball/gh-pages" class="example">
+     Download
+    </a>
+  
+  <article></article>  
+      
+  <footer class = 'license'>
+    <a href='http://creativecommons.org/licenses/by-nc-sa/3.0/'>
+    <img width = '80px' src = 'http://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png'>
+    </a>
+  </footer>
+  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  
+  <article data-timings="">
+    <!-- adding bold and italic options -->
+
+<style>
+em {
+  font-style: italic
+}
+strong {
+  font-weight: bold;
+}
+</style>
+
+<h2>This presentation was generated in R</h2>
+
+<ul>
+<li>Written in <code>Rmarkdown</code></li>
+<li>Using <code>slidify</code> R package</li>
+<li>Assemblage of multiple software packages (e.g. <code>knitr</code>)</li>
+<li>Nice features and (small) active online community</li>
+<li><code>Rmarkdown</code> code is translated into html</li>
+<li>Can be viewed in web browser (e.g. Google Chrome)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2><code>Slidify</code> installation</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <iframe src = 'https://slidify.github.io/index.html' height='600px'></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-3" style="background:;">
+  
+  <hgroup>
+    <h2>First there were dancing graphs</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-4" style="background:white;">
+  
+  <hgroup>
+    <h2>R package <code>gganimate</code></h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-1-1.gif" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" width="95%" height="95%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>With a general hatred of Powerpoint</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul class = "build incremental">
+<li>Previously used open source <code>libreoffice impress</code></li>
+<li>Or <code>inkscape</code> vector image editor!</li>
+<li>Difficult to include/edit <strong>high quality graphics</strong></li>
+<li><strong>No time reduction</strong> of repetitive tasks</li>
+<li>Making <strong>high quality/consistent slides</strong> challenging</li>
+<li><strong>Animations</strong> difficult to impossible</li>
+<li><code>Beamer</code> package from <code>Latex</code> was an option, but <strong>difficult to integrate R</strong></li>
+<li><code>Rmarkdown</code> seemed to tick all the boxes</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-6" style="background:;">
+  
+  <hgroup>
+    <h2>A tour of features</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Github hosting and access</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>YAML front matter</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <pre><code class="console">---
+title       : &quot;Making presentation slides in R&quot;
+subtitle    : &quot;Coffee &amp; R&quot;
+author      : Dr Axel Barlow
+job         : &quot;email: a.barlow@bangor.ac.uk&quot;
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : zenburn      # {zenburn, tomorrow, solarized-dark, ...}
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {selfcontained, standalone, draft}
+knit        : slidify::knit2slides
+logo        : LA_Full_colour_reversed.svg
+biglogo     : A1_FullColour.svg
+assets      : {assets: ../../assets}
+license     : by-nc-sa
+github:
+  user: draxelbarlow
+  repo: Ax_slidify_eg_bangor
+  branch: &quot;gh-pages&quot;
+---
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Slide formatting</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <h3>Header 2</h3>
+
+<ul>
+<li>list1</li>
+<li>list2</li>
+</ul>
+
+<ol>
+<li>Numbered list1</li>
+<li>Numbered list2</li>
+</ol>
+
+<ul class = "build incremental">
+<li><p>Appear on click</p></li>
+<li><p><strong>bold</strong></p></li>
+<li><p><em>italic</em></p></li>
+<li><p><code>inline code</code>  </p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Code</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <pre><code class="console">--- .class #id
+
+## Slide formatting
+
+### Header 2
+
+- list1
+- list2
+
+1. Numbered list1
+2. Numbered list2
+
+&gt;- Appear on click
+
+&gt;- **bold**
+&gt;- *italic*
+&gt;- `inline code`  
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  
+  <hgroup>
+    <h2>Two column layout</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <h3>Here&#39;s an alternative layout</h3>
+
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>list1</li>
+<li>list2</li>
+<li>list3</li>
+<li>list4</li>
+<li>list5</li>
+<li>list6</li>
+<li>list7</li>
+<li>list8</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/red-eye-frog-2815683.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" width="100%" /></p>
+
+<p><em>Random frog picture</em></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Code</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <pre><code class="console">--- &amp;twocol
+
+## Two column layout
+
+#*** =left
+
+#*** =right
+
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Tables</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <pre><code class="console">|Subject|Emotion|Object|
+|----|----|----|
+|I|hate|Powerpoint|
+|I|love|Rmarkdown|
+</code></pre>
+
+<table><thead>
+<tr>
+<th>Subject</th>
+<th>Emotion</th>
+<th>Object</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>I</td>
+<td>hate</td>
+<td>Powerpoint</td>
+</tr>
+<tr>
+<td>I</td>
+<td>love</td>
+<td>Rmarkdown</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Or for dataframes or tibbles...</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <pre><code class="r">my.dataframe
+</code></pre>
+
+<pre><code>##   Subject Emotion     Object
+## 1       I    hate Powerpoint
+## 2       I    love  Rmarkdown
+</code></pre>
+
+<pre><code class="r">kable(my.dataframe)
+</code></pre>
+
+<table><thead>
+<tr>
+<th align="left">Subject</th>
+<th align="left">Emotion</th>
+<th align="left">Object</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">I</td>
+<td align="left">hate</td>
+<td align="left">Powerpoint</td>
+</tr>
+<tr>
+<td align="left">I</td>
+<td align="left">love</td>
+<td align="left">Rmarkdown</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Code chunks</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <pre><code>```&lt;language, echo=TRUE/FALSE, eval=TRUE/FALSE, other stuff&gt;
+... code
+```
+</code></pre>
+
+<h3>R code</h3>
+
+<pre><code class="r">print(&quot;this is R code&quot;)
+</code></pre>
+
+<pre><code>## [1] &quot;this is R code&quot;
+</code></pre>
+
+<h3>bash</h3>
+
+<pre><code class="bash">echo &quot;this is bash&quot;
+</code></pre>
+
+<pre><code>## this is bash
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-16" style="background:white;">
+  
+  <hgroup>
+    <h2>Plots</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul>
+<li>The plot is generated within an R code chunk and plotted to the slide</li>
+</ul>
+
+<p><img src="assets/fig/unnamed-chunk-8-1.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" width="65%" height="65%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Code</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <h3>This is what the R chunk looks like</h3>
+
+<pre><code class="console">#```{r, out.width = &quot;65%&quot;, out.height = &quot;65%&quot;, fig.width = 9, fig.height = 7, 
+#dpi = 600, fig.align = &quot;center&quot;, echo = FALSE}
+my.dat &lt;- rnorm(100, 10, 1)
+my.df &lt;- enframe(my.dat)
+
+plot &lt;- ggplot(my.df) +
+  geom_histogram(aes(x = value), colour=&quot;black&quot;, fill=&quot;lightblue&quot;, bins = 10) +
+  theme_bw(base_size = 25)
+
+plot
+#```
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Images</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/smilodon1.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" width="45%" style="display: block; margin: auto;" /></p>
+
+<h3>Code</h3>
+
+<pre><code class="console">#```{r, out.width = &quot;45%&quot;, dpi = 300, echo = FALSE, fig.align=&#39;center&#39;}
+include_graphics(&quot;./assets/img/smilodon1.png&quot;)
+#```
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Complex images</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="./assets/img/aDNA_seq.svg" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" width="60%" style="display: block; margin: auto;" /></p>
+
+<h3>Code</h3>
+
+<pre><code class="console">#```{r, out.width = &quot;60%&quot;, dpi = 300, echo = FALSE, fig.align=&#39;center&#39;}
+include_graphics(&quot;./assets/img/aDNA_seq.svg&quot;)
+#```
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Embedding websites</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <iframe src = 'https://pleistocenegenomics.com' height='600px'></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Code</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <pre><code class="console"> &lt;iframe src = &#39;https://pleistocenegenomics.com&#39; height=&#39;600px&#39;&gt;&lt;/iframe&gt;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Embedding pdfs</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><embed src="./assets/img/Paijmans et al. - 2017.pdf" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" width="100%" height="500" type="application/pdf" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>Code</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <pre><code class="console">#```{r, out.width = &quot;100%&quot;, out.height=500, dpi = 300, echo = FALSE}
+include_graphics(&quot;./assets/img/Paijmans et al. - 2017.pdf&quot;)
+#```
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-24" style="background:;">
+  
+  <hgroup>
+    <h2>Has it helped? [note segue layout]</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  
+  <hgroup>
+    <h2>Histogram example</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Heights of 898 people, in metres </li>
+</ul>
+
+<pre><code>##    height
+## 1    1.86
+## 2    1.76
+## 3    1.75
+## 4    1.75
+## 5    1.87
+## 6    1.84
+## 7    1.66
+## 8    1.66
+## 9    1.80
+## 10   1.73
+## 11   1.79
+## 12   1.74
+## 13   1.70
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <ul>
+<li>Binned data</li>
+</ul>
+
+<pre><code>##    start finish counts
+## 1   1.40   1.45      3
+## 2   1.45   1.50      3
+## 3   1.50   1.55     44
+## 4   1.55   1.60    122
+## 5   1.60   1.65    163
+## 6   1.65   1.70    171
+## 7   1.70   1.75    149
+## 8   1.75   1.80    146
+## 9   1.80   1.85     76
+## 10  1.85   1.90     13
+## 11  1.90   1.95      6
+## 12  1.95   2.00      1
+## 13  2.00   2.05      1
+</code></pre>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-26" style="background:white;">
+  
+  <hgroup>
+    <h2>Histogram example</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul>
+<li>Using 14 bins</li>
+</ul>
+
+<p><img src="assets/fig/unnamed-chunk-14-1.png" title="plot of chunk unnamed-chunk-14" alt="plot of chunk unnamed-chunk-14" width="60%" height="60%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-27" style="background:white;">
+  
+  <hgroup>
+    <h2>Effect of bin size</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul>
+<li>Using 7 bins</li>
+</ul>
+
+<p><img src="assets/fig/unnamed-chunk-15-1.png" title="plot of chunk unnamed-chunk-15" alt="plot of chunk unnamed-chunk-15" width="60%" height="60%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-28" style="background:white;">
+  
+  <hgroup>
+    <h2>Effect of bin size</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul>
+<li>Using 28 bins</li>
+</ul>
+
+<p><img src="assets/fig/unnamed-chunk-16-1.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" width="60%" height="60%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-29" style="background:;">
+  
+  <hgroup>
+    <h2>Penguins</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-30" style="background:white;">
+  
+  <hgroup>
+    <h2>Penguins</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul>
+<li>Body mass: quantitative continuous</li>
+<li>Species: categorical</li>
+</ul>
+
+<div style='float:left;width:48%;' class='centered'>
+  <p><img src="./assets/img/chinstrap-penguin-1149258.jpg" title="plot of chunk unnamed-chunk-17" alt="plot of chunk unnamed-chunk-17" width="100%" /></p>
+
+<p><strong>Chinstrap penguin</strong></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="./assets/img/gentoo-penguins-337589.jpg" title="plot of chunk unnamed-chunk-18" alt="plot of chunk unnamed-chunk-18" width="100%" /></p>
+
+<p><strong>Gentoo penguin</strong></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-31" style="background:white;">
+  
+  <hgroup>
+    <h2>Data visualisation</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-19-1.png" title="plot of chunk unnamed-chunk-19" alt="plot of chunk unnamed-chunk-19" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-32" style="background:white;">
+  
+  <hgroup>
+    <h2>Box plot</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Also know as a box and whisker plot</li>
+<li>The box shows:
+
+<ul>
+<li><strong>Median</strong> (50th percentile)</li>
+<li><strong>lower quartile</strong> (25th percentile)</li>
+<li><strong>upper quartile</strong> (75th percentile)</li>
+</ul></li>
+<li>Note upper - lower quartile is the <strong>interquartile range</strong></li>
+<li><strong>Whiskers</strong> extend to the furthest data point within 1.5 x the interquartile range</li>
+<li>Anything outside this range is an <strong>outlier</strong></li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="assets/fig/unnamed-chunk-20-1.png" title="plot of chunk unnamed-chunk-20" alt="plot of chunk unnamed-chunk-20" width="95%" height="95%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="" id="slide-33" style="background:white;">
+  
+  <hgroup>
+    <h2>Barchart</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Species goes on the x axis</li>
+<li><strong>Mean</strong> body mass on the y axis</li>
+<li><strong>Error bars</strong> often used to display the sample variation</li>
+<li>+/- one <strong>standard deviation</strong> in this example</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="assets/fig/unnamed-chunk-21-1.png" title="plot of chunk unnamed-chunk-21" alt="plot of chunk unnamed-chunk-21" width="95%" height="95%" style="display: block; margin: auto;" /></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-34" style="background:white;">
+  
+  <hgroup>
+    <h2>Showing the data points</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-22-1.png" title="plot of chunk unnamed-chunk-22" alt="plot of chunk unnamed-chunk-22" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-35" style="background:;">
+  
+  <hgroup>
+    <h2>Sample sizes</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>A simple example:</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <ul>
+<li>There are two student groups, you hypothesise that one is taller than the other</li>
+<li>Height is a normally distributed continuous quantitative variable</li>
+<li><strong>Null hypothesis</strong>: there is no difference in (the distribution of) height between the two groups</li>
+<li><strong>Alternate hypothesis</strong>: there is a difference</li>
+<li>You measure 10 students from each group and compare...</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-37" style="background:white;">
+  
+  <hgroup>
+    <h2>Comparison 1</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-23-1.png" title="plot of chunk unnamed-chunk-23" alt="plot of chunk unnamed-chunk-23" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-38" style="background:white;">
+  
+  <hgroup>
+    <h2>Comparison 2</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-24-1.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-39" style="background:white;">
+  
+  <hgroup>
+    <h2>Comparison 3</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-25-1.png" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-40" style="background:white;">
+  
+  <hgroup>
+    <h2>Comparison 4</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-26-1.png" title="plot of chunk unnamed-chunk-26" alt="plot of chunk unnamed-chunk-26" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-41" style="background:;">
+  
+  <hgroup>
+    <h2>So are the groups different?</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  
+  <hgroup>
+    <h2>All the groups are sampled from the same normal distribution</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <pre><code class="r">group1 &lt;- rnorm(10, 170, 10)
+group2 &lt;- rnorm(10, 170, 10)
+
+group1
+</code></pre>
+
+<pre><code>##  [1] 160.8895 153.7914 176.8832 164.1606 180.4169 159.9684 176.8528 174.3741
+##  [9] 171.9017 147.9585
+</code></pre>
+
+<pre><code class="r">group2
+</code></pre>
+
+<pre><code>##  [1] 192.9088 162.6418 156.1617 175.3498 171.3170 184.2103 181.3498 178.3536
+##  [9] 176.7788 175.4640
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-43" style="background:;">
+  
+  <hgroup>
+    <h2>Now let&#39;s increase the sample size</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-44" style="background:white;">
+  
+  <hgroup>
+    <h2>Comparison 1</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-28-1.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-45" style="background:white;">
+  
+  <hgroup>
+    <h2>Comparison 2</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-29-1.png" title="plot of chunk unnamed-chunk-29" alt="plot of chunk unnamed-chunk-29" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-46" style="background:white;">
+  
+  <hgroup>
+    <h2>Comparison 3</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-30-1.png" title="plot of chunk unnamed-chunk-30" alt="plot of chunk unnamed-chunk-30" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-47" style="background:white;">
+  
+  <hgroup>
+    <h2>Comparison 4</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-31-1.png" title="plot of chunk unnamed-chunk-31" alt="plot of chunk unnamed-chunk-31" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-48" style="background:;">
+  
+  <hgroup>
+    <h2>Using other people&#39;s code</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-49" style="background:white;">
+  
+  <hgroup>
+    <h2><code>r</code> shows the strength of correlation</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-32-1.png" title="plot of chunk unnamed-chunk-32" alt="plot of chunk unnamed-chunk-32" width="100%" style="display: block; margin: auto;" /></p>
+
+<p><em>R code for plot by Denis Boigelot</em></p>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="segue dark" id="slide-50" style="background:;">
+  
+  <hgroup>
+    <h2>Ice cream</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="class" id="slide-51" style="background:white;">
+  
+  <hgroup>
+    <h2>Eating ice cream does not cause dehydration</h2>
+  </hgroup>
+  
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-33-1.png" title="plot of chunk unnamed-chunk-33" alt="plot of chunk unnamed-chunk-33" width="80%" style="display: block; margin: auto;" /></p>
+
+<pre><code class="console">ice_cream &lt;- data.frame(icecream=jitter(1:10, factor=3), cancer=jitter(11:20, factor=5))
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+  
+</slide>
+
+<slide class="thank-you-slide segue nobackground" id="slide-52">
+  <aside class="gdbar right"><img src="assets/img/LA_Full_colour_reversed.svg"></aside>
+  <article class="flexbox vleft auto-fadein">
+    <h2>Thank you</h2>
+    <p><strong>Now a look &quot;behind the scenes&quot;</strong></p>
+
+  </article>
+
+  <p class="auto-fadein" data-config-contact="">
+    
+  </p>
+</slide>
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='<code>Slidify</code> installation'>
+         2
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='First there were dancing graphs'>
+         3
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='R package <code>gganimate</code>'>
+         4
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='With a general hatred of Powerpoint'>
+         5
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='A tour of features'>
+         6
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Github hosting and access'>
+         7
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='YAML front matter'>
+         8
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Slide formatting'>
+         9
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Code'>
+         10
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Two column layout'>
+         11
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Code'>
+         12
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Tables'>
+         13
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Or for dataframes or tibbles...'>
+         14
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Code chunks'>
+         15
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Plots'>
+         16
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Code'>
+         17
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Images'>
+         18
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Complex images'>
+         19
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Embedding websites'>
+         20
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Code'>
+         21
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Embedding pdfs'>
+         22
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Code'>
+         23
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Has it helped? [note segue layout]'>
+         24
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='Histogram example'>
+         25
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='Histogram example'>
+         26
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='Effect of bin size'>
+         27
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='Effect of bin size'>
+         28
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='Penguins'>
+         29
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='Penguins'>
+         30
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='Data visualisation'>
+         31
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='Box plot'>
+         32
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='Barchart'>
+         33
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='Showing the data points'>
+         34
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='Sample sizes'>
+         35
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='A simple example:'>
+         36
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='Comparison 1'>
+         37
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='Comparison 2'>
+         38
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title='Comparison 3'>
+         39
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title='Comparison 4'>
+         40
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title='So are the groups different?'>
+         41
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=42 title='All the groups are sampled from the same normal distribution'>
+         42
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=43 title='Now let&#39;s increase the sample size'>
+         43
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=44 title='Comparison 1'>
+         44
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=45 title='Comparison 2'>
+         45
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=46 title='Comparison 3'>
+         46
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=47 title='Comparison 4'>
+         47
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=48 title='Using other people&#39;s code'>
+         48
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=49 title='<code>r</code> shows the strength of correlation'>
+         49
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=50 title='Ice cream'>
+         50
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=51 title='Eating ice cream does not cause dehydration'>
+         51
+      </a>
+    </li>
+    
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=52 title='Thank you'>
+         52
+      </a>
+    </li>
+    
+    </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
