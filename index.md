@@ -14,7 +14,7 @@ biglogo     : A1_FullColour.svg
 assets      : {assets: ../../assets}
 license     : by-nc-sa
 github:
-  user: draxelbarlow
+  user: drabarlow
   repo: Ax_slidify_eg_bangor
   branch: "gh-pages"
 ---
@@ -77,6 +77,8 @@ strong {
 
 ## Github hosting and access
 
+<iframe src = 'https://github.com/drabarlow/' height='600px'></iframe>
+
 --- .class #id
 
 ## YAML front matter
@@ -98,7 +100,7 @@ biglogo     : A1_FullColour.svg
 assets      : {assets: ../../assets}
 license     : by-nc-sa
 github:
-  user: draxelbarlow
+  user: drabarlow
   repo: Ax_slidify_eg_bangor
   branch: "gh-pages"
 ---
